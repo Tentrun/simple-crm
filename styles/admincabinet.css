@@ -1,0 +1,373 @@
+body{
+background:#f2f3f7;
+font-family: "Roboto";
+overflow: hidden;
+
+}
+
+.leftpanel          /* левая панель */
+{
+display: block;
+overflow: hidden;
+background: #99DFE0;
+background: -webkit-linear-gradient(bottom right, #99DFE0, #01A3DF);
+background: -moz-linear-gradient(bottom right, #99DFE0, #01A3DF);
+background: linear-gradient(to top left, #99DFE0, #01A3DF);
+-webkit-box-shadow: 4px 0px 4px 0px rgba(50, 50, 50, 0.35);
+-moz-box-shadow:    4px 0px 4px 0px rgba(50, 50, 50, 0.35);
+box-shadow:         4px 0px 4px 0px rgba(50, 50, 50, 0.35);
+width: 20vh;
+height: 100vh;
+padding: 5px 15px;
+margin: -102vh 0 0 -10px;
+transition: 0.7s;
+}
+
+
+
+#leftpaneltext          /* текст левой панель */
+{
+
+font-family: Sans-serif;
+font-size: 17px;
+color: #e6e6fa;
+text-align: center
+}
+
+.toppanel          /* панель сверху */
+{
+overflow: hidden;
+background:#2b2b2b;
+width: 217vh;
+height: 20vh;
+margin-top: -2vh;
+margin-left: -2vh;
+}
+
+#createoredertext                 /* текст при создаеии заказа */
+{
+
+margin-top: 1vh;
+font-family: "Roboto";
+text-align: center;
+font-size: 20px;
+color: white;
+line-height: 0px;
+padding-bottom: 2vh;
+}
+
+
+#removeoredertext                 /* текст при удалении заказа */
+{
+
+margin-top: 3vh;
+font-family: "Roboto";
+text-align: center;
+font-size: 20px;
+color: white;
+line-height: 0px;
+padding-bottom: 7vh;
+}
+
+#errortext                 /* тект ошибки */
+{
+font-weight: 200;
+margin-top: 5vh;
+font-family: "Roboto";
+text-align: center;
+font-size: 30px;
+color: black;
+line-height: 0px;
+}
+
+#toppaneltext                 /* первый логотип */
+{
+font-family: "Asap";
+text-align: center;
+font-size: 30px;
+color: #fad201;
+line-height: 0px;
+}
+#toppaneltext2                 /* второй логотип */
+{
+font-family: "Roboto";
+text-align: center;
+font-size: 30px;
+color: #e6e6fa;
+line-height: 10px;
+}
+
+.items {
+
+padding: 2vh;
+margin-top: 0vh;
+
+position: relative;
+}
+
+.items > img {
+  cursor:pointer;                /* иконки в левой панели  */
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 1.4vh;
+  margin-bottom: 0.6vh;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#itemstext {                         /* текст под иконками в левой панели */
+  font-size: 14px;
+  color: white;
+}
+
+.profile {
+  margin-top: 12vh;
+  margin-bottom: 2vh;
+}
+
+.profile > img {
+
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logout{                      /*ссылка  */
+  text-align: center
+}
+
+#logout a{
+  font-family: Roboto;
+  color: white;
+  text-decoration:none;
+}
+
+#logout a:visited{             /*ссылка  (уже посещенная) */
+  color:white;
+
+}
+
+#logout a:hover{               /* ссылка при наведении */
+  color:red;
+}
+
+.wrapper {                       /* обертка для таблицы */
+  margin-top: 0px;
+  margin-left: 23vh;
+  width: 185vh; 
+  height: 82vh;
+  background: #f2f3f7;
+}
+
+.table {                       /* класс ячеек таблицы */
+  margin: 0 0 0px 0;
+  width: 188vh;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table; }
+
+.row {                        /* класс таблицы */
+  display: table-row;
+  background: #f6f6f6; }
+
+.row:nth-of-type(odd) {              /* цвет следующей повторяющийся таблицы */
+  background: #e9e9e9; }
+
+.row.header {                       /* заголовок таблицы */
+  font-weight: 900;
+  color: #ffffff;
+  background: #ea6153; }
+
+.row.green {                         /* класс таблицы */
+  background: #27ae60; }
+
+.row.blue {                         /* класс таблицы */
+  background: #2980b9; }
+
+.cell {                        /* отступы в ячейке */
+  padding: 6px 6px;
+  display: table-cell; }
+
+
+#square{ /* бокс создания заказа */
+  background-color: #2b2b2b;
+  height: 78vh;
+  width: 70vh;
+  margin-left: 65vh;
+  margin-right: auto;
+  margin-bottom: 60vh;
+  margin-top: 1vh;
+  border-radius: 30px;
+  transition: 1s;
+}
+
+
+
+#square2 /* бокс удаления заказа */
+{
+  background-color: #2b2b2b;
+  height: 55vh;
+  width: 70vh;
+  margin-left: 65vh;
+  margin-right: auto;
+  margin-bottom: 60vh;
+  margin-top: 5vh;
+  border-radius: 30px;
+  transition: 1s;
+
+}
+
+#square3{ /* бокс редактирования заказа */
+  background-color: #2b2b2b;
+  height: 78vh;
+  width: 70vh;
+  margin-left: 65vh;
+  margin-right: auto;
+  margin-bottom: 60vh;
+  margin-top: 1vh;
+  border-radius: 30px;
+  transition: 1s;
+}
+
+.group        {  /* группа полей ввода*/
+  position:relative; 
+  margin-bottom: 4vh; 
+}
+
+
+
+input         { /* поле ввода*/
+  font-size:18px;
+  display:block;
+  width:50vh;
+  margin-left: 10vh;
+  margin-right: 2vh;
+  margin-top: 0vh;
+  border-radius: 20px;
+  -moz-appearance: textfield;
+}
+input:focus{  /* поле ввода при наведении*/
+outline:none; 
+} 
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+label          { /* подсказка поля ввода*/
+  color:#999; 
+  font-size:16px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:5px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  margin-left: 10vh;
+}
+
+input:focus ~ label, input:valid ~ label    { /* текст подсказки поля ввода*/
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+#box{ /* кнопка создания заказа*/
+  display: inline-block;
+  background: #22F251;
+  background: -webkit-linear-gradient(top left, #22F251, #95BEFF);
+  background: -moz-linear-gradient(top left, #22F251, #95BEFF);
+  background: linear-gradient(to bottom right, #22F251, #95BEFF);
+  color: white;
+  border: none;
+  border-radius: 7vh;
+  width:19vh;
+  height: 8vh;
+  margin-right: 7vh;
+  margin-left:8vh;
+  font-size: 16px;
+}
+
+#box:hover{ /* кнопка при наведение создания заказа*/
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
+
+#box2{ /* кнопка удаления заказа*/
+  display: block;
+  outline: none;
+  background: #22F251;
+  background: -webkit-linear-gradient(top left, #22F251, #95BEFF);
+  background: -moz-linear-gradient(top left, #22F251, #95BEFF);
+  background: linear-gradient(to bottom right, #22F251, #95BEFF);
+  color: white;
+  border: none;
+  border-radius: 7vh;
+  width:23vh;
+  height: 8vh;
+  margin-top: 2vh;
+  margin-left:24vh;
+  font-size: 16px;
+}
+
+#box2:hover{ /* кнопка при наведение удаления заказа*/
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
+
+#box3{ /* кнопка редактирования заказа*/
+  display: inline-block;
+  background: #22F251;
+  background: -webkit-linear-gradient(top left, #22F251, #95BEFF);
+  background: -moz-linear-gradient(top left, #22F251, #95BEFF);
+  background: linear-gradient(to bottom right, #22F251, #95BEFF);
+  color: white;
+  border: none;
+  border-radius: 7vh;
+  width:19vh;
+  height: 8vh;
+  margin-right: 7vh;
+  margin-left:8vh;
+  font-size: 16px;
+  margin-top: -3vh;
+}
+
+#box3:hover{ /* кнопка при наведение редактирования заказа*/
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
+
+a{ /* не подчеркивать и сделать белым текст кнопок*/
+  color: white;
+  text-decoration: none;
+}
+
+a:visited{
+  color: white;
+  text-decoration: none;
+}
