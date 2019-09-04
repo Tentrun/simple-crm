@@ -1,7 +1,6 @@
 <?php
 require "db.php";
 
-
 ?>
 
 
@@ -27,6 +26,7 @@ $orders = R::Find('orders', 'client = ?', [$authorizeduser]);
 <link rel="stylesheet" href="https://use.typekit.net/prl1ykq.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700'>
 <link rel="stylesheet" href="./styles/cabinet.css">
+<meta name="viewport" content="initial-scale=0.9, viewport-fit=cover">
 
 	<title>Личный кабинет</title>
 </head>
@@ -129,8 +129,8 @@ echo '</div>';
 
 ?>
 </div>
-  <div id ="errortext"><?php echo $errortype ?></div>
-
+  <div id ="errortext"><?php echo $errortype; ?></div>
+  <div id ="errortext"><?php echo $errorcreateorder; ?></div>
 </div>
 
 

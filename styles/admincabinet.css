@@ -1,3 +1,7 @@
+html{
+
+}
+
 body{
 background:#f2f3f7;
 font-family: "Roboto";
@@ -153,9 +157,12 @@ position: relative;
   color:red;
 }
 
-.wrapper {                       /* обертка для таблицы */
+.wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;                      /* обертка для таблицы */
   margin-top: 0px;
   margin-left: 23vh;
+  padding-right: 300vh;
   width: 185vh; 
   height: 82vh;
   background: #f2f3f7;
@@ -370,4 +377,22 @@ a{ /* не подчеркивать и сделать белым текст кн
 a:visited{
   color: white;
   text-decoration: none;
+}
+
+#squaremsg{
+  cursor: inherit;
+  overflow: hidden;
+  width: 60vh;
+  height: 16vh;
+  line-height: 20px;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-left: 1vh;
+  margin-left: 0vh;
+  margin-right: auto;
+  resize: none;
+  border-radius: 1vh; 
+  border: 0.5px solid green;
+  outline: none;
+  word-wrap: break-word;
 }

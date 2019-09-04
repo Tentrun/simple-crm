@@ -360,10 +360,16 @@ echo '<div class="cell">';
 echo "Номер заказа";
 echo '</div>';
 echo '<div class="cell">';
-echo "Дата обращения";
+echo "Серийный номер";
 echo '</div>';
 echo '<div class="cell">';
 echo "Статус";
+echo '</div>';
+echo '<div class="cell">';
+echo "Заказчик";
+echo '</div>';
+echo '<div class="cell">';
+echo "Дата обращения";
 echo '</div>';
 echo '</div>';
 }
@@ -414,10 +420,16 @@ echo '<div class="cell">';
 echo $item['number'];
 echo '</div>';
 echo '<div class="cell">';
-echo $item['date'];
+echo $item['serialcode'];
 echo '</div>';
 echo '<div class="cell">';
 echo $status;
+echo '</div>';
+echo '<div class="cell">';
+echo $item['clientorder'];
+echo '</div>';
+echo '<div class="cell">';
+echo $item['date'];
 echo '</div>';
 echo '</div>';
 }
@@ -436,11 +448,11 @@ echo '</div>';
 
   <div class ="leftpanel"> 
         <div class="items">
-          <img src="../images/cart.png" ondragstart="return false;"> <center><div id="itemstext">Все заказы</div></center> 
+          <img src="../images/cart.png" ondragstart="return false;" alt="" onclick="javascript:document.location.href='/adminpanel.php'"> <center><div id="itemstext" onclick="javascript:document.location.href='/adminpanel.php'">Все заказы</div></center> 
           <img src="../images/plus.png" ondragstart="return false;" onclick="openbox('square'); return false"> <center><div id="itemstext" onclick="openbox('square'); return false">Добавить заказ</div></center>
           <img src="../images/edit.png" ondragstart="return false;" onclick="openbox('square3'); return false"> <center><div id="itemstext" onclick="openbox('square3'); return false">Редактировать заказ</div></center>
           <img src="../images/minus.png" ondragstart="return false;" onclick="openbox('square2'); return false" alt=""> <center><div id="itemstext" onclick="openbox('square2'); return false" >Удалить заказ</div></center> 
-          <img src="../images/view.png" ondragstart="return false;" alt=""> <center><div id="itemstext">Заявки</div></center>
+          <img src="../images/view.png" ondragstart="return false;" alt="" onclick="javascript:document.location.href='/adminrequest.php'"> <center><div id="itemstext" onclick="javascript:document.location.href='/adminrequest.php'">Заявки</div></center>
         </div>
 
 

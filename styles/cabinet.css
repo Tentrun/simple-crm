@@ -310,54 +310,49 @@ transition: 0.5s;
 }
 
 
-.select-box {
-  cursor: pointer;
-  position : relative;
-  max-width:  50vh;
-  margin-top: 2vh;
-  margin-left: 4vh;
-  width: 100%;
+.box {
+  position: absolute;
+  margin-top: 35vh;
+  margin-left: 35vh;
+  transform: translate(-50%, -50%);
 }
 
-.select,
-.label {
-  color: #414141;
-  display: block;
-  font: 400 17px/2em 'Source Sans Pro', sans-serif;
+.box select {
+  background-color: #0563af;
+  color: white;
+  padding: 12px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
 }
 
-.select {
-  margin-top: 1vh;
-  margin-left: 10.7vh;
-  width: 40vh;
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
   position: absolute;
   top: 0;
-  padding: 5px 0;
-  height: 7vh;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  background: none transparent;
-  border: 0 none;
-}
-.select-box1 {
-  background: #ececec;
-}
-
-.label {
-  position: relative;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-.open .label::after {
-   content: "▲";
-}
-.label::after {
-  content: "▼";
-  font-size: 12px;
-  position: absolute;
   right: 0;
-  top: 0;
-  padding: 5px 15px;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
 }
 
 #box{ /* кнопка создания заявки*/
@@ -380,4 +375,163 @@ transition: 0.5s;
   color: white;
   outline: none;
   text-decoration: none;
+}
+
+@media screen and (max-width: 800px){
+.leftpanel{
+  height: 100vh;
+  width: 10vh;
+  padding-top: 11vh;
+}
+.toppanel{
+  height: 10vh;
+  width: 50vh;
+}
+#toppaneltext{
+padding-top: 2vh;
+font-size: 14px;
+margin-left: 10vh;
+}
+#toppaneltext2{
+  font-size: 10px;
+  margin-left: 10vh;
+}
+#itemstext{
+  font-size: 15px;
+}
+}
+
+@media screen and (max-width: 400px){
+
+.leftpanel{
+  overflow: 
+  height: 100vh;
+  width: 10vh;
+  padding-top: 11vh;
+}
+.toppanel{
+  height: 10vh;
+  width: 45vh;
+  margin-left: 13vh;
+}
+#toppaneltext{
+padding-top: 1vh;
+font-size: 14px;
+margin-left: -4vh;
+}
+#toppaneltext2{
+  font-size: 10px;
+  margin-left: -4vh;
+}
+#itemstext{
+  font-size: 13px;
+  margin-left: -1vh;
+}
+.profile{
+  margin-top: 25vh;
+}
+#leftpaneltext{
+font-size: 13px;
+}
+.items{
+  margin-top: -10vh;
+}
+.items > img{
+  margin-left: -1vh;
+  margin-right: 0vh;
+}
+.wrapper {                
+  margin-top: 0px;
+  margin-left: 13vh;
+  width: 43vh; 
+  height: 88vh;
+  background: #f2f3f7;
+}
+
+.table {                       /* класс ячеек таблицы */
+
+  width: 1vh;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table; }
+
+.cell {                        /* отступы в ячейке */
+  padding: 6px 6px;
+  display: table-cell; 
+  font-size: 8px;}
+
+#errortext{
+  font-size: 20px;
+}
+
+#square{ /* блок заполнения заявки */
+
+height: 40vh;
+width: 40vh;
+border-radius: 4vh;
+margin-top: 2vh;
+margin-left: 15vh;
+}
+
+#squaretext{
+  font-size: 30px;
+  padding-top: 2vh;
+}
+
+#squaremsg{
+  width: 29vh;
+  height: 20vh;
+  line-height: 20px;
+  border-radius: 5px;
+  padding-top: 2px;
+  padding-left: 1vh;
+  margin-left: -20vh;
+  margin-right: auto;
+  resize: none;
+}
+
+#squaremsg:focus ~ label, #squaremsg:valid ~ label    { /* текст подсказки поля ввода*/
+  top:-20px;
+  font-size:14px;
+}
+
+.group        {  /* группа полей ввода*/
+  position:relative; 
+  margin-bottom: 4vh; 
+}
+
+input         { /* поле ввода*/
+  font-size:12px;
+  width:17vh;
+  margin-left: -14vh;
+  margin-right: 2vh;
+  margin-top: 0vh;
+}
+
+label          { /* подсказка поля ввода*/
+  font-size:10px;
+  left:5px;
+  top:1px;
+  margin-left: -14vh;
+}
+
+input:focus ~ label, input:valid ~ label    { /* текст подсказки поля ввода*/
+  top:-20px;
+  font-size:14px;
+}
+
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  height:2px; 
+  width:0;
+  bottom:1px; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+
+
 }
